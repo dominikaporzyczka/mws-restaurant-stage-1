@@ -273,7 +273,7 @@ nav h1 a {
 }
 
 /* Single review*/
-.review-heading {
+.review-header {
   display: flex;
   flex-direction: row;
   padding: 12px 20px;
@@ -284,16 +284,16 @@ nav h1 a {
   border-top-left-radius: 20px;
 }
 
-.review-heading p {
+.review-header p {
   color: inherit;
   margin: 0;
 }
 
-.review-heading p:first-of-type {
+.review-header p:first-of-type {
   font-size: 1.3em;
 }
 
-.review-heading p:last-of-type {
+.review-header p:last-of-type {
   text-shadow: 3px 2px 4px #000;
   color: #c4c4c4;
 }

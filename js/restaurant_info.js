@@ -116,19 +116,39 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  * Create review HTML and add it to the webpage.
  */
 createReviewHTML = (review) => {
-  const li = document.createElement('li');
+  const li = document.createElement('li'),
+  reviewHeader = createHeaderReviewHTML(review),
+  reviewContent = createContentReviewHTML(review);
 
-  const reviewHeading = document.createElement('div');
-  reviewHeading.classList.add('review-heading');
+  li.appendChild(reviewHeader);
+  li.appendChild(reviewContent);
+
+  return li;
+}
+
+
+/**
+ * Create HTML for header in review and add it to the container.
+ */
+createHeaderReviewHTML = (review) => {
+  const reviewHeader = document.createElement('div');
+  reviewHeader.classList.add('review-header');
 
   const name = document.createElement('p');
   name.innerHTML = review.name;
-  reviewHeading.appendChild(name);
+  reviewHeader.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
-  reviewHeading.appendChild(date);
+  reviewHeader.appendChild(date);
 
+  return reviewHeader;
+}
+
+/**
+ * Create HTML for content in review and add it to the container.
+ */
+createContentReviewHTML = (review) => {
   const reviewContent = document.createElement('div');
   reviewContent.classList.add('review-content');
 
@@ -141,10 +161,7 @@ createReviewHTML = (review) => {
   comments.innerHTML = review.comments;
   reviewContent.appendChild(comments);
 
-  li.appendChild(reviewHeading);
-  li.appendChild(reviewContent);
-
-  return li;
+  return reviewContent;
 }
 
 /**
