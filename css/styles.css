@@ -320,3 +320,23 @@ nav h1 a {
   letter-spacing: 1px;
   border-radius: 4px;
 }
+
+/* ====================== Responsive ====================== */
+
+@media screen and (max-width: 800px) { 
+  .inside #map-container {
+    height: 50vh;
+    position: static;
+    width: 100%;
+    margin-top: 130px;
+  }
+
+  #breadcrumb {
+    width: 100%;
+  }
+
+  #restaurant-container, 
+  #reviews-container {
+    width: 100%;
+  }
+}
