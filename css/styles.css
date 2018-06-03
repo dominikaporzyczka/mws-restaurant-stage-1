@@ -132,7 +132,10 @@ nav h1 a {
   padding: 0 10px;
   width: 200px;
 }
-
+#neighborhoods-select:focus,
+#cuisines-select:focus {
+  outline: 1px solid #273fc4;
+}
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
