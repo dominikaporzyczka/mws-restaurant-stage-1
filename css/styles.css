@@ -331,6 +331,22 @@ nav h1 a {
   border-radius: 4px;
 }
 
+/* ====================== Offline Page ====================== */
+#offline-page {
+  text-align: center;
+}
+
+#offline-page img {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+}
+
+.offline-message {
+  font-size: 2em;
+  padding: 0 20px;
+}
+
 /* ====================== Responsive ====================== */
 
 @media screen and (max-width: 900px) {

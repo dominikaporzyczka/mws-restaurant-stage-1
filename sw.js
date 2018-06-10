@@ -7,6 +7,7 @@ self.addEventListener('install', function (event) {
                 '/',
                 'index.html',
                 'restaurant.html',
+                'offline.html',
                 'css/styles.css',
                 'js/dbhelper.js',
                 'js/main.js',
@@ -21,6 +22,7 @@ self.addEventListener('install', function (event) {
                 'img/8.jpg',
                 'img/9.jpg',
                 'img/10.jpg',
+                'img/offline.gif'
             ]);
         })
     );
@@ -45,6 +47,8 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function (response) {
             return response || fetch(event.request);
+        }).catch(function () {
+            return caches.match('/offline.html');
         })
     );
 });
